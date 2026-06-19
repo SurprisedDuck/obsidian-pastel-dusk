@@ -1,4 +1,4 @@
-# Deep Nord
+# Pastel Frost
 
 A dark-only [Obsidian](https://obsidian.md) theme — a personal, calmer take on the
 [Nord](https://www.nordtheme.com) palette. Built on top of
@@ -16,7 +16,7 @@ A dark-only [Obsidian](https://obsidian.md) theme — a personal, calmer take on
 ## Install
 
 _Manual (for now):_ copy `theme.css` and `manifest.json` into
-`<your vault>/.obsidian/themes/Deep Nord/`, then enable it under
+`<your vault>/.obsidian/themes/Pastel Frost/`, then enable it under
 **Settings → Appearance → Themes**.
 
 ## Credits

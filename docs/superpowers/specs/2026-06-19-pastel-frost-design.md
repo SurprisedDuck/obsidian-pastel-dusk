@@ -1,12 +1,12 @@
-# Deep Nord — Design Spec
+# Pastel Frost — Design Spec
 
 **Date:** 2026-06-19
-**Repo:** [SurprisedDuck/obsidian-deep-nord](https://github.com/SurprisedDuck/obsidian-deep-nord) (public)
+**Repo:** [SurprisedDuck/obsidian-pastel-frost](https://github.com/SurprisedDuck/obsidian-pastel-frost) (public)
 **Status:** approved design, pre-implementation
 
 ## Overview
 
-Deep Nord is a **dark-only** Obsidian theme — a calmer, deeper, pastel take on the Nord
+Pastel Frost is a **dark-only** Obsidian theme — a calmer, deeper, pastel take on the Nord
 palette. It is a derivative of [insanum/obsidian_nord](https://github.com/insanum/obsidian_nord)
 ("Obsidian Nord" by Eric Davis, MIT). We keep that theme's clean variable architecture and
 re-map it to our own identity.
@@ -41,7 +41,7 @@ re-map it to our own identity.
 
 Single `theme.css` + `manifest.json`, following the base theme's structure:
 
-1. **`:root`** — palette as reusable variables (RGB triplets + hex), extended with Deep Nord's
+1. **`:root`** — palette as reusable variables (RGB triplets + hex), extended with Pastel Frost's
    deep backgrounds and pastel Frost/Aurora shades.
 2. **`body`** — global tokens: HSL accent, link/tag decorations, radii, weights.
 3. **`.theme-dark`** — maps the palette onto Obsidian's variables (the bulk of the theme).
@@ -116,13 +116,13 @@ red `#cf9aa0` · orange `#d6a98f` · yellow `#e6d2a8` · green `#b5ca9f` · purp
 ## File structure
 
 ```
-obsidian-deep-nord/
+obsidian-pastel-frost/
   theme.css          # the theme (to build)
-  manifest.json      # name "Deep Nord", author SurprisedDuck, version 0.1.0, minAppVersion 0.16.0
+  manifest.json      # name "Pastel Frost", author SurprisedDuck, version 0.1.0, minAppVersion 0.16.0
   README.md          # done
   LICENSE            # done (MIT, dual copyright)
   sample/            # a test note exercising every styled element (for verification)
-  docs/superpowers/specs/2026-06-19-deep-nord-design.md  # this spec
+  docs/superpowers/specs/2026-06-19-pastel-frost-design.md  # this spec
 ```
 
 ## Verification
@@ -130,9 +130,9 @@ obsidian-deep-nord/
 No Obsidian vault exists on this machine, and Obsidian can't be driven headlessly here, so
 verification is **visual, in Obsidian**:
 
-1. Author `sample/Deep Nord Showcase.md` covering H1–H6, body, bold/italic, internal/external
+1. Author `sample/Pastel Frost Showcase.md` covering H1–H6, body, bold/italic, internal/external
    links, highlight, inline + fenced code, every callout type, a table, task list, tags, and an embed.
-2. Install the theme into a vault (`<vault>/.obsidian/themes/Deep Nord/`), enable it, open the
+2. Install the theme into a vault (`<vault>/.obsidian/themes/Pastel Frost/`), enable it, open the
    showcase note in both reading and editing views.
 3. Confirm against this spec; iterate from screenshots the user shares.
 
