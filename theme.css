@@ -10,12 +10,15 @@
 
 :root
 {
-    /* Deep backgrounds (dark only) */
+    /* Deep backgrounds (dark only) — darkest → lightest */
     --pf-backdrop:   #15181e;
     --pf-sidebar:    #1b1f27;
+    --pf-elev:       #20252e; /* secondary-alt surface */
     --pf-editor:     #242933;
     --pf-surface:    #2e3440;
     --pf-surface-hi: #3b4252;
+    --pf-row-odd:    #222730; /* table row striping (sits in the ramp) */
+    --pf-row-even:   #262c37;
 
     /* Pastel Frost — accent family */
     --pf-teal:   #a8cbca;
@@ -23,9 +26,8 @@
     --pf-blue:   #9db6cf;
     --pf-indigo: #819dbe;
 
-    /* Pastel Frost — accent as RGB triplets (for rgba()) */
+    /* Pastel Frost — accent as RGB triplet (for rgba()) */
     --pf-teal-rgb: 168,203,202;
-    --pf-cyan-rgb: 162,206,218;
 
     /* Text */
     --pf-text:     #d8dee9;
@@ -69,7 +71,7 @@ body
     --tab-radius:        var(--radius-m);
     --tab-radius-active: var(--radius-m);
     --modal-radius:      var(--radius-l);
-    --checkbox-radius:   5px;
+    --checkbox-radius:   5px; /* intentionally sub-s for a softer checkbox squircle */
 }
 
 .theme-dark
@@ -78,7 +80,7 @@ body
     --background-primary:               var(--pf-editor);
     --background-primary-alt:           var(--pf-editor);
     --background-secondary:             var(--pf-sidebar);
-    --background-secondary-alt:         #20252e;
+    --background-secondary-alt:         var(--pf-elev);
     --background-modifier-border:       var(--pf-surface);
     --background-modifier-border-hover: var(--pf-surface-hi);
 
@@ -143,6 +145,7 @@ body
     --color-cyan:   var(--pf-cyan);
     --color-blue:   var(--pf-blue);
     --color-purple: var(--pf-purple);
+    /* RGB triplets mirror --pf-red / --pf-green / --pf-blue above (keep in sync) */
     --color-red-rgb:    207,154,160;
     --color-green-rgb:  181,202,159;
     --color-blue-rgb:   157,182,207;
@@ -150,8 +153,8 @@ body
     /* Tables */
     --table-header-background:       var(--pf-sidebar);
     --table-header-background-hover: var(--pf-surface);
-    --table-row-even-background:     #262c37;
-    --table-row-odd-background:      #222730;
+    --table-row-even-background:     var(--pf-row-even);
+    --table-row-odd-background:      var(--pf-row-odd);
     --table-row-background-hover:    var(--pf-surface);
 
     /* Nav / icons / window chrome */
@@ -172,6 +175,7 @@ body
 }
 
 /* ── Rounded floating panes ───────────────────────────────────────── */
+/* Backdrop shows between leaves so each pane reads as a rounded card. */
 .theme-dark .workspace-split.mod-root { background: var(--pf-backdrop); }
 
 .theme-dark .workspace-tabs .workspace-leaf,
