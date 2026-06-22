@@ -7,3 +7,6 @@
 # Editors
 .vscode/
 .idea/
+
+# Local dev preview (not part of the theme)
+preview.html
