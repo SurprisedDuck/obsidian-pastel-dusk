@@ -1,12 +1,21 @@
-# Pastel Frost — Design Spec
+# Pastel Dusk — Design Spec
 
 **Date:** 2026-06-19
-**Repo:** [SurprisedDuck/obsidian-pastel-frost](https://github.com/SurprisedDuck/obsidian-pastel-frost) (public)
-**Status:** approved design, pre-implementation
+**Repo:** [SurprisedDuck/obsidian-pastel-dusk](https://github.com/SurprisedDuck/obsidian-pastel-dusk) (public)
+**Status:** built, installed, and iterated in-app
+
+> **Update (2026-06-22) — where we landed.** The palette evolved well past this original
+> spec through live iteration. Final identity: a **pastel turquoise** accent (`#9fd6cb`) for
+> buttons / tags / active states; **pastel blue** links (`#97b8e0`) and file names (`#c8e0f6`);
+> **six distinct pastel heading colours** (turquoise · blue · green · lilac · rose · amber);
+> a deep near-neutral background (`#1d1f20`, with a darker left sidebar `#0f1112`); soft
+> rounded corners; and floating panes. **`theme.css` is the source of truth for exact
+> colours** — the values in the sections below reflect the earlier "frost" design and are
+> kept for history.
 
 ## Overview
 
-Pastel Frost is a **dark-only** Obsidian theme — a calmer, deeper, pastel take on the Nord
+Pastel Dusk is a **dark-only** Obsidian theme — a calmer, deeper, pastel take on the Nord
 palette. It is a derivative of [insanum/obsidian_nord](https://github.com/insanum/obsidian_nord)
 ("Obsidian Nord" by Eric Davis, MIT). We keep that theme's clean variable architecture and
 re-map it to our own identity.
@@ -41,7 +50,7 @@ re-map it to our own identity.
 
 Single `theme.css` + `manifest.json`, following the base theme's structure:
 
-1. **`:root`** — palette as reusable variables (RGB triplets + hex), extended with Pastel Frost's
+1. **`:root`** — palette as reusable variables (RGB triplets + hex), extended with Pastel Dusk's
    deep backgrounds and pastel Frost/Aurora shades.
 2. **`body`** — global tokens: HSL accent, link/tag decorations, radii, weights.
 3. **`.theme-dark`** — maps the palette onto Obsidian's variables (the bulk of the theme).
@@ -62,7 +71,7 @@ Header comment credits insanum + Nord + MIT.
 | surface | `#2e3440` | borders, tag bg, table cell borders |
 | surface-hi | `#3b4252` | hover/active surfaces |
 
-### Pastel Frost (accent family)
+### Pastel Dusk (accent family)
 | Token | Hex | Use |
 |---|---|---|
 | teal | `#a8cbca` | **accent**, H1, internal+external links, inline title, tags, checkboxes, button bg |
@@ -116,13 +125,13 @@ red `#cf9aa0` · orange `#d6a98f` · yellow `#e6d2a8` · green `#b5ca9f` · purp
 ## File structure
 
 ```
-obsidian-pastel-frost/
+obsidian-pastel-dusk/
   theme.css          # the theme (to build)
-  manifest.json      # name "Pastel Frost", author SurprisedDuck, version 0.1.0, minAppVersion 0.16.0
+  manifest.json      # name "Pastel Dusk", author SurprisedDuck, version 0.1.0, minAppVersion 0.16.0
   README.md          # done
   LICENSE            # done (MIT, dual copyright)
   sample/            # a test note exercising every styled element (for verification)
-  docs/superpowers/specs/2026-06-19-pastel-frost-design.md  # this spec
+  docs/superpowers/specs/2026-06-19-pastel-dusk-design.md  # this spec
 ```
 
 ## Verification
@@ -130,9 +139,9 @@ obsidian-pastel-frost/
 No Obsidian vault exists on this machine, and Obsidian can't be driven headlessly here, so
 verification is **visual, in Obsidian**:
 
-1. Author `sample/Pastel Frost Showcase.md` covering H1–H6, body, bold/italic, internal/external
+1. Author `sample/Pastel Dusk Showcase.md` covering H1–H6, body, bold/italic, internal/external
    links, highlight, inline + fenced code, every callout type, a table, task list, tags, and an embed.
-2. Install the theme into a vault (`<vault>/.obsidian/themes/Pastel Frost/`), enable it, open the
+2. Install the theme into a vault (`<vault>/.obsidian/themes/Pastel Dusk/`), enable it, open the
    showcase note in both reading and editing views.
 3. Confirm against this spec; iterate from screenshots the user shares.
 

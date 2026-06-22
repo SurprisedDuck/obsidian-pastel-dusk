@@ -1,7 +1,7 @@
-# Pastel Frost
+# Pastel Dusk
 
-A dark-only [Obsidian](https://obsidian.md) theme — a personal, calmer take on the
-[Nord](https://www.nordtheme.com) palette. Built on top of
+A dark-only [Obsidian](https://obsidian.md) theme — soft, muted **pastel turquoise**
+on a deep, near-neutral dark background, with soft rounded corners. Built on top of
 [insanum/obsidian_nord](https://github.com/insanum/obsidian_nord).
 
 > **Status:** 🚧 work in progress
@@ -9,14 +9,18 @@ A dark-only [Obsidian](https://obsidian.md) theme — a personal, calmer take on
 ## How it differs from stock Nord
 
 - **Dark only** — light mode dropped, all focus on one polished dark look.
-- **Deeper background** — a darker, more focused base than standard Nord.
-- **Calmer headings** — no rainbow; a restrained, readable hierarchy.
-- **Unified accent** — one Frost Teal (`#8fbcbb`) drives links, buttons, and active states.
+- **Deep, near-neutral background** — a dark, low-chroma base (`#1d1f20`), with a darker left sidebar.
+- **Distinct heading colours** — each level its own soft pastel (turquoise, blue, green, lilac, rose, amber).
+- **Pastel turquoise accent** — soft turquoise (`#9fd6cb`) for buttons, tags, and active states.
+- **Pastel blue links & files** — links and file names in soft blue (links a touch darker, files a touch lighter).
+- **Soft rounded corners** — gentle radii, with panes floating as cards.
+- **Folders vs files** — file names in pastel blue, folders neutral, so the tree reads clearly.
+- **Soft pastel syntax & callouts** — gentle, low-saturation colours.
 
 ## Install
 
 _Manual (for now):_ copy `theme.css` and `manifest.json` into
-`<your vault>/.obsidian/themes/Pastel Frost/`, then enable it under
+`<your vault>/.obsidian/themes/Pastel Dusk/`, then enable it under
 **Settings → Appearance → Themes**.
 
 ## Credits

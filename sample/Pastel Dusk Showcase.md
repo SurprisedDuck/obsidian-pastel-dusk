@@ -1,4 +1,4 @@
-# Pastel Frost Showcase
+# Pastel Dusk Showcase
 
 Body text with an [[internal link]], an [external link](https://obsidian.md),
 **bold**, *italic*, ==a highlight==, and `inline code`. A #nord #theme tag pair.
@@ -25,8 +25,8 @@ console.log(greet("Nord"));
 
 | Decision   | Value     |
 | ---------- | --------- |
-| Accent     | #a8cbca   |
-| Background  | #242933   |
+| Accent     | #9fd6cb   |
+| Background  | #1d1f20   |
 
 - [x] decide accent
 - [ ] write the spec

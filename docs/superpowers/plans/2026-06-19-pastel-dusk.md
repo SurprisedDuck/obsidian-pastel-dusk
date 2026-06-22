@@ -1,27 +1,27 @@
-# Pastel Frost Implementation Plan
+# Pastel Dusk Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build "Pastel Frost", a dark-only Obsidian theme — a soft pastel take on Nord — by assembling `theme.css` + `manifest.json` per the approved design spec.
+**Goal:** Build "Pastel Dusk", a dark-only Obsidian theme — a soft pastel take on Nord — by assembling `theme.css` + `manifest.json` per the approved design spec.
 
 **Architecture:** A single `theme.css` following the structure of the base theme (insanum/obsidian_nord, MIT): a `:root` palette of reusable variables, a `body` block of global tokens (HSL accent, decorations, radii), a `.theme-dark` block mapping the palette onto Obsidian's variables, and a small structural section for rounded floating panes. No light mode. We build the file section-by-section, verifying each against a local HTML preview harness, then confirm the whole thing in Obsidian against a showcase note.
 
 **Tech Stack:** Plain CSS (Obsidian theme variables), JSON manifest. Local verification via a static `preview.html` served with Python's `http.server` and the preview MCP tools (`preview_start`, `preview_screenshot`, `preview_eval`).
 
-**Spec:** `docs/superpowers/specs/2026-06-19-pastel-frost-design.md`
-**Repo:** `SurprisedDuck/obsidian-pastel-frost` (origin already set; commit + push each task).
+**Spec:** `docs/superpowers/specs/2026-06-19-pastel-dusk-design.md`
+**Repo:** `SurprisedDuck/obsidian-pastel-dusk` (origin already set; commit + push each task).
 
 ---
 
 ## File Structure
 
 ```
-obsidian-pastel-frost/
-  manifest.json     # Task 1 — theme metadata, name "Pastel Frost"
+obsidian-pastel-dusk/
+  manifest.json     # Task 1 — theme metadata, name "Pastel Dusk"
   theme.css         # Tasks 1,3–9 — the theme, built section by section
   preview.html      # Task 2 — local dev verification harness (gitignored, not part of the theme)
   sample/
-    Pastel Frost Showcase.md   # Task 10 — in-Obsidian verification note
+    Pastel Dusk Showcase.md   # Task 10 — in-Obsidian verification note
   README.md         # Task 11 — install section finalized (already exists)
   LICENSE           # exists (MIT, dual copyright)
 ```
@@ -55,7 +55,7 @@ Expected: prints `525 /tmp/nord-base.css`. This is reference only — we author 
 
 ```json
 {
-   "name": "Pastel Frost",
+   "name": "Pastel Dusk",
    "version": "0.1.0",
    "minAppVersion": "0.16.0",
    "author": "SurprisedDuck",
@@ -67,13 +67,13 @@ Expected: prints `525 /tmp/nord-base.css`. This is reference only — we author 
 
 ```css
 /*
- * Pastel Frost — a dark-only Obsidian theme.
+ * Pastel Dusk — a dark-only Obsidian theme.
  * A soft, pastel take on the Nord palette.
  *
  * Based on "Obsidian Nord" by Eric Davis (insanum)
  *   https://github.com/insanum/obsidian_nord  (MIT, (c) 2020 Eric Davis)
  * Nord palette (c) Arctic Ice Studio — https://www.nordtheme.com
- * Pastel Frost modifications (c) 2026 SurprisedDuck. MIT.
+ * Pastel Dusk modifications (c) 2026 SurprisedDuck. MIT.
  */
 ```
 
@@ -221,13 +221,13 @@ git push origin main
     --pf-surface:    #2e3440;
     --pf-surface-hi: #3b4252;
 
-    /* Pastel Frost — accent family */
+    /* Pastel Dusk — accent family */
     --pf-teal:   #a8cbca;
     --pf-cyan:   #a2ceda;
     --pf-blue:   #9db6cf;
     --pf-indigo: #819dbe;
 
-    /* Pastel Frost — accent as RGB triplets (for rgba()) */
+    /* Pastel Dusk — accent as RGB triplets (for rgba()) */
     --pf-teal-rgb: 168,203,202;
     --pf-cyan-rgb: 162,206,218;
 
@@ -571,12 +571,12 @@ git push origin main
 ## Task 10: Showcase note for in-Obsidian verification
 
 **Files:**
-- Create: `sample/Pastel Frost Showcase.md`
+- Create: `sample/Pastel Dusk Showcase.md`
 
 - [ ] **Step 1: Create the showcase note**
 
 ````markdown
-# Pastel Frost Showcase
+# Pastel Dusk Showcase
 
 Body text with an [[internal link]], an [external link](https://obsidian.md),
 **bold**, *italic*, ==a highlight==, and `inline code`. A #nord #theme tag pair.
@@ -616,8 +616,8 @@ Text selection, the active line, and the graph view (open it) should all read te
 - [ ] **Step 2: Commit**
 
 ```bash
-git add "sample/Pastel Frost Showcase.md"
-git -c core.pager=cat commit -m "docs: add Pastel Frost showcase note for verification" -m "Supported by Claude Opus 4.8"
+git add "sample/Pastel Dusk Showcase.md"
+git -c core.pager=cat commit -m "docs: add Pastel Dusk showcase note for verification" -m "Supported by Claude Opus 4.8"
 git push origin main
 ```
 
@@ -634,10 +634,10 @@ git push origin main
 Tell the user to copy the theme into a vault (or use an existing one):
 ```bash
 # Example — replace <VAULT> with a real vault path:
-mkdir -p "<VAULT>/.obsidian/themes/Pastel Frost"
-cp theme.css manifest.json "<VAULT>/.obsidian/themes/Pastel Frost/"
+mkdir -p "<VAULT>/.obsidian/themes/Pastel Dusk"
+cp theme.css manifest.json "<VAULT>/.obsidian/themes/Pastel Dusk/"
 ```
-Then in Obsidian: **Settings → Appearance → Themes → Pastel Frost**, and open `sample/Pastel Frost Showcase.md`.
+Then in Obsidian: **Settings → Appearance → Themes → Pastel Dusk**, and open `sample/Pastel Dusk Showcase.md`.
 
 - [ ] **Step 2: Verify against the spec**
 
@@ -655,7 +655,7 @@ If the floating panes don't round/gap correctly, inspect the leaf DOM in Obsidia
 
 - [ ] **Step 4: Finalize README + commit**
 
-Confirm `README.md` install steps match Step 1 (folder name "Pastel Frost"). Make any wording fixes, then:
+Confirm `README.md` install steps match Step 1 (folder name "Pastel Dusk"). Make any wording fixes, then:
 ```bash
 git add -A
 git -c core.pager=cat commit -m "fix: in-app verification corrections; finalize v0.1.0" -m "Supported by Claude Opus 4.8"
@@ -677,13 +677,13 @@ git tag 0.1.0 && git push origin 0.1.0
 - Deep backgrounds + backdrop → Tasks 3, 5, 9. ✓
 - Unified pastel teal accent (links/buttons/active/title/tags) → Tasks 3,4,6,7,8. ✓
 - Frost-gradient headings → Task 6. ✓
-- Pastel Frost + Aurora palette → Tasks 3, 8. ✓
+- Pastel Dusk + Aurora palette → Tasks 3, 8. ✓
 - Rounding (radius scale, floating panes, tabs/inputs/embeds/media) → Tasks 4, 9. ✓
 - Kept-stock components recolored (callouts/tables/checkboxes/graph/syntax) → Tasks 7, 8. ✓
 - Attribution/licence header → Task 1. ✓
 - Verification (preview harness + showcase note in-app) → Tasks 2, 10, 11. ✓
-- manifest "Pastel Frost" → Task 1. ✓
+- manifest "Pastel Dusk" → Task 1. ✓
 
 **Placeholder scan:** No TBD/TODO; every CSS/JSON/markdown step contains complete content. The one deferred item (exact `.workspace-*` selectors) is an explicit in-app verification step with a concrete fix procedure (Task 9 note, Task 11 Step 3), not a content gap.
 
-**Type/name consistency:** Variable names are consistent across tasks (`--pf-teal`, `--pf-teal-rgb`, `--pf-editor`, `--pf-sidebar`, etc.). Harness class names in Task 2 match the variables exercised in Tasks 3–8. Folder name "Pastel Frost" consistent in manifest (Task 1), showcase path (Task 10), install path (Task 11), README.
+**Type/name consistency:** Variable names are consistent across tasks (`--pf-teal`, `--pf-teal-rgb`, `--pf-editor`, `--pf-sidebar`, etc.). Harness class names in Task 2 match the variables exercised in Tasks 3–8. Folder name "Pastel Dusk" consistent in manifest (Task 1), showcase path (Task 10), install path (Task 11), README.
